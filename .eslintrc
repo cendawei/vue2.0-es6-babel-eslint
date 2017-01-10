@@ -1,0 +1,19 @@
+{
+  "extends": ["eslint:recommended"],
+  "env": {
+    "commonjs": true,
+    "es6": true,
+    "browser": true
+  },
+
+  //解析vue的时候需要用到下面任意一个，不然会解析失败，因为eslint只是对当前文件的语法进行检测，不会执行require将文件引入后检测。最好是两个都使用
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+
+  //解析vue的时候需要用到下面这个，不然html部分会报错
+  "plugins": [
+    "html"
+  ]
+}
